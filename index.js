@@ -256,4 +256,109 @@ console.log(`Current Date and Time: ${date}/${month}/${year} ${hours}:${minutes}
 */
 
 
+// Local Storage
+/*
+// SetItem(key, value)
+localStorage.setItem('username', 'Adnan');
+localStorage.setItem('password', '12345');
 
+// GetItem(key)
+let UserName = localStorage.getItem('username');
+let Password = localStorage.getItem('password');
+
+console.log(`Username: ${UserName}`);
+console.log(`Password: ${Password}`);
+
+// RemoveItem(key)
+localStorage.removeItem('password');
+
+localStorage.clear(); // sob data remove korbe local storage theke
+
+const countries = ['Bangladesh', 'Saudi Arabia', 'Turkey', 'Malaysia'];
+localStorage.setItem('username', 'Adnan');
+localStorage.setItem('password', '12345');
+localStorage.setItem('countries', JSON.stringify(countries)); // array ke string e convert kore local storage e save korbe
+
+const storedCountries = JSON.parse(localStorage.getItem('countries')) // string ke abar array te convert korbe
+console.log(storedCountries);
+*/
+
+// Session Storage
+/*
+// SetItem(key, value)
+sessionStorage.setItem('sessionName', 'MorningSession');
+sessionStorage.setItem('sessionId', 'MS123');
+
+// GetItem(key)
+let sessionId = sessionStorage.getItem('sessionId');
+console.log(`Session ID: ${sessionId}`);
+
+// RemoveItem(key)
+sessionStorage.removeItem('sessionName'); 
+
+sessionStorage.clear(); // sob data remove korbe session storage theke
+*/
+
+// Cookies
+// Set a cookie
+// document.cookie = 'user=Adnan; expires = Wed, 29 Oct 2025 09:25:00 GMT;';
+
+
+//  DOM
+// let myHeading = document.getElementById('h1')
+// myHeading.innerHTML = 'This is updated heading 1';
+
+// let myPara = document.getElementById('para')
+// myPara.style.color = 'blue';
+
+// document.getElementsByTagName('h2')[1].innerHTML = 'This is updated heading 2';
+
+// document.getElementsByClassName('para1')[0].innerHTML = 'This is updated paragraph 1';
+
+/// Using querySelector
+// document.querySelector('#pid').innerHTML = 'This is updated paragraph using query selector';
+
+// document.querySelector('.pcls').innerHTML = 'This is updated paragraph using query selector class';
+
+// document.querySelector('h3').innerHTML = 'This is updated heading 3 using query selector tag';
+
+// document.querySelector('a').innerHTML = 'How are you?';
+
+// document.querySelector('li a').innerHTML = 'ListItem link updated';
+
+// document.querySelector('.myDiv a').innerHTML = 'MyDiv link updated';
+
+/// Button Click
+// function showMessage(){
+//     alert('Hello Everyone!');
+// }
+
+// function surprise(){
+//     let msz = document.querySelector('#salam')
+//     msz.innerHTML = 'Assalamu Alaikum!';
+// }
+
+// function showImage(){
+//     document.querySelector('#imgID').src = 'https://img.freepik.com/free-vector/simple-vibing-cat-square-meme_742173-4493.jpg?semt=ais_hybrid&w=740&q=80';
+// }
+
+
+// Creating Elements
+let newHeading = document.createElement('h3');
+let text = document.createTextNode('This is a new heading created using createElement and createTextNode');
+newHeading.appendChild(text);
+
+let myDiv = document.querySelector('#myDiv');
+myDiv.appendChild(newHeading);
+
+// Removing Elements
+let H2 = document.querySelector('h2');
+myDiv.removeChild(H2);
+
+// Inserting Before an Element
+let heading0 = document.createElement('h1');
+let text0 = document.createTextNode('Assalamu Alaikum');
+heading0.appendChild(text0);
+
+let heading1 = document.querySelector('h1');
+myDiv.insertBefore(heading0,heading1);
